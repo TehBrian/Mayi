@@ -1,13 +1,13 @@
 package dev.tehbrian.mayi.paper;
 
-import dev.tehbrian.mayi.core.Restriction;
 import dev.tehbrian.mayi.core.Mayi;
+import dev.tehbrian.mayi.core.Restriction;
 import dev.tehbrian.mayi.core.RestrictionInfo;
 import dev.tehbrian.mayi.core.RestrictionLoader;
+import io.papermc.paper.plugin.configuration.PluginMeta;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
 import org.slf4j.Logger;
 
 import java.lang.reflect.Constructor;
@@ -71,16 +71,16 @@ public class PaperRestrictionLoader
 					continue;
 				}
 
-				final PluginDescriptionFile description = plugin.getDescription();
+				final PluginMeta description = plugin.getPluginMeta();
 				if (!description.getName().equals(info.name())) {
 					logger.debug("Failed because the plugin's name did not match the RestrictionInfo's specified name.");
 					logger.debug("Expected: {} Actual: {}", info.name(), description.getName());
 					continue;
 				}
-				if (!description.getMain().equals(info.mainClass())) {
+				if (!description.getMainClass().equals(info.mainClass())) {
 					logger.debug("Failed because the plugin's main class"
 							+ " did not match the RestrictionInfo's specified main class.");
-					logger.debug("Expected: {} Actual: {}", info.mainClass(), description.getMain());
+					logger.debug("Expected: {} Actual: {}", info.mainClass(), description.getMainClass());
 					continue;
 				}
 				final Pattern versionPattern = Pattern.compile(info.version());
