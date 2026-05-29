@@ -1,6 +1,6 @@
-package dev.tehbrian.restrictionhelper.spigot;
+package dev.tehbrian.mayi.spigot;
 
-import dev.tehbrian.restrictionhelper.core.Restriction;
+import dev.tehbrian.mayi.core.Restriction;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.slf4j.Logger;

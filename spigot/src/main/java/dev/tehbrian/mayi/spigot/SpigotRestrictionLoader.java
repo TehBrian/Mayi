@@ -1,9 +1,9 @@
-package dev.tehbrian.restrictionhelper.spigot;
+package dev.tehbrian.mayi.spigot;
 
-import dev.tehbrian.restrictionhelper.core.Restriction;
-import dev.tehbrian.restrictionhelper.core.RestrictionHelper;
-import dev.tehbrian.restrictionhelper.core.RestrictionInfo;
-import dev.tehbrian.restrictionhelper.core.RestrictionLoader;
+import dev.tehbrian.mayi.core.Restriction;
+import dev.tehbrian.mayi.core.Mayi;
+import dev.tehbrian.mayi.core.RestrictionInfo;
+import dev.tehbrian.mayi.core.RestrictionLoader;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -18,10 +18,10 @@ import java.util.regex.Pattern;
 
 /**
  * A utility class which registers {@link Restriction}s into a
- * {@link RestrictionHelper} instance according to a list of plugins.
+ * {@link Mayi} instance according to a list of plugins.
  */
 public class SpigotRestrictionLoader
-		extends RestrictionLoader<Player, Location, SpigotRestriction, SpigotRestrictionHelper, Plugin> {
+		extends RestrictionLoader<Player, Location, SpigotRestriction, SpigotMayi, Plugin> {
 
 	/**
 	 * @param logger               the {@code Logger} used to log whether a check fails or
@@ -41,12 +41,12 @@ public class SpigotRestrictionLoader
 	 * For each plugin in {@link #plugins}, checks whether any of the
 	 * {@link #possibleRestrictions} were made for that specific version of
 	 * that specific plugin and, if so, constructs the {@code Restriction} and
-	 * registers it into {@code RestrictionHelper}.
+	 * registers it into {@code Mayi}.
 	 *
-	 * @param restrictionHelper the {@code RestrictionHelper} instance
+	 * @param mayi the {@code Mayi} instance
 	 */
 	@Override
-	public void load(final SpigotRestrictionHelper restrictionHelper) {
+	public void load(final SpigotMayi mayi) {
 		final List<String> pluginNames = new ArrayList<>();
 		plugins.forEach(p -> pluginNames.add(p.getName()));
 
@@ -113,7 +113,7 @@ public class SpigotRestrictionLoader
 					continue;
 				}
 
-				restrictionHelper.registerRestriction(restriction);
+				mayi.registerRestriction(restriction);
 
 				this.logger.info("Registered the restriction for {} successfully.", description.getName());
 			}

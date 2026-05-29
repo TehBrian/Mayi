@@ -1,5 +1,5 @@
 plugins {
-	id("restrictionhelper.java-conventions")
+	id("mayi.java-conventions")
 }
 
 repositories {
@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-	api(project(":restrictionhelper-core"))
+	api(project(":mayi-core"))
 
 	compileOnly("org.slf4j:slf4j-api:2.0.9")
 	compileOnly("org.jspecify:jspecify:1.0.0")

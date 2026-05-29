@@ -1,4 +1,4 @@
-package dev.tehbrian.restrictionhelper.core;
+package dev.tehbrian.mayi.core;
 
 import org.slf4j.Logger;
 
@@ -6,15 +6,15 @@ import java.util.List;
 
 /**
  * A utility class which registers {@link Restriction}s into a
- * {@link RestrictionHelper} instance according to a list of plugins.
+ * {@link Mayi} instance according to a list of plugins.
  *
  * @param <PLAYER> the player type
  * @param <L>      the location type
  * @param <R>      the {@code Restriction} type
- * @param <H>      the {@code RestrictionHelper} type
+ * @param <H>      the {@code Mayi} type
  * @param <PLUGIN> the plugin type
  */
-public abstract class RestrictionLoader<PLAYER, L, R extends Restriction<PLAYER, L>, H extends RestrictionHelper<PLAYER, L, R>, PLUGIN> {
+public abstract class RestrictionLoader<PLAYER, L, R extends Restriction<PLAYER, L>, H extends Mayi<PLAYER, L, R>, PLUGIN> {
 
 	/**
 	 * Used to log whether a check fails or passes, and why.
@@ -50,10 +50,10 @@ public abstract class RestrictionLoader<PLAYER, L, R extends Restriction<PLAYER,
 	 * For each plugin in {@link #plugins}, checks whether any of the
 	 * {@link #possibleRestrictions} were made for that specific version of
 	 * that specific plugin and, if so, constructs the {@code Restriction} and
-	 * registers it into {@code RestrictionHelper}.
+	 * registers it into {@code Mayi}.
 	 *
-	 * @param restrictionHelper the {@code RestrictionHelper} instance
+	 * @param mayi the {@code Mayi} instance
 	 */
-	public abstract void load(H restrictionHelper);
+	public abstract void load(H mayi);
 
 }

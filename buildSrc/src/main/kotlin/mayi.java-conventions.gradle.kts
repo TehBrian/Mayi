@@ -14,7 +14,7 @@ indra {
 		target(25)
 	}
 
-	github("TehBrian", "RestrictionHelper")
+	github("TehBrian", "Mayi")
 
 	mitLicense()
 

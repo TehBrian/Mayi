@@ -1,12 +1,12 @@
-package dev.tehbrian.restrictionhelper.spigot.restrictions;
+package dev.tehbrian.mayi.spigot.restrictions;
 
 import com.plotsquared.bukkit.player.BukkitPlayer;
 import com.plotsquared.bukkit.util.BukkitUtil;
 import com.plotsquared.core.permissions.Permission;
 import com.plotsquared.core.plot.Plot;
-import dev.tehbrian.restrictionhelper.core.ActionType;
-import dev.tehbrian.restrictionhelper.core.RestrictionInfo;
-import dev.tehbrian.restrictionhelper.spigot.SpigotRestriction;
+import dev.tehbrian.mayi.core.ActionType;
+import dev.tehbrian.mayi.core.RestrictionInfo;
+import dev.tehbrian.mayi.spigot.SpigotRestriction;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.slf4j.Logger;

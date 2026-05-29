@@ -1,17 +1,17 @@
-package dev.tehbrian.restrictionhelper.core;
+package dev.tehbrian.mayi.core;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The main class for RestrictionHelper. It mainly serves to hold the list of
+ * The main class for Mayi. It mainly serves to hold the list of
  * {@link Restriction}s to be checked against.
  *
  * @param <P> the player type
  * @param <L> the location type
  * @param <R> the {@code Restriction} type
  */
-public abstract class RestrictionHelper<P, L, R extends Restriction<P, L>> {
+public abstract class Mayi<P, L, R extends Restriction<P, L>> {
 
 	/**
 	 * The internal list of {@code Restriction}s to be checked against.

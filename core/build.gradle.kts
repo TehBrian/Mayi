@@ -1,5 +1,5 @@
 plugins {
-	id("restrictionhelper.java-conventions")
+	id("mayi.java-conventions")
 }
 
 repositories {
