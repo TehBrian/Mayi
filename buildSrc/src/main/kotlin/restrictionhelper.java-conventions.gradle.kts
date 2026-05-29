@@ -18,8 +18,8 @@ indra {
 
 	mitLicense()
 
-	publishReleasesTo("thbn", "https://repo.thbn.me/releases")
-	publishSnapshotsTo("thbn", "https://repo.thbn.me/snapshots")
+	publishReleasesTo("tehbrian", "https://repo.tehbrian.dev/releases")
+	publishSnapshotsTo("tehbrian", "https://repo.tehbrian.dev/snapshots")
 
 	configurePublications {
 		pom {
