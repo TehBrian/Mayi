@@ -7,5 +7,5 @@ repositories {
 }
 
 dependencies {
-	api("net.kyori:indra-common:3.0.1")
+	api("net.kyori:indra-common:4.0.0")
 }

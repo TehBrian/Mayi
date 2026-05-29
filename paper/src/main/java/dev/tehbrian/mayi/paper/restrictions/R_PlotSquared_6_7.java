@@ -1,4 +1,4 @@
-package dev.tehbrian.mayi.spigot.restrictions;
+package dev.tehbrian.mayi.paper.restrictions;
 
 import com.plotsquared.bukkit.player.BukkitPlayer;
 import com.plotsquared.bukkit.util.BukkitUtil;
@@ -6,7 +6,7 @@ import com.plotsquared.core.permissions.Permission;
 import com.plotsquared.core.plot.Plot;
 import dev.tehbrian.mayi.core.ActionType;
 import dev.tehbrian.mayi.core.RestrictionInfo;
-import dev.tehbrian.mayi.spigot.SpigotRestriction;
+import dev.tehbrian.mayi.paper.PaperRestriction;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import java.util.Objects;
 
 @RestrictionInfo(name = "PlotSquared", version = "^(6|7).*", mainClass = "com.plotsquared.bukkit.BukkitPlatform")
 @SuppressWarnings("checkstyle:TypeName")
-public final class R_PlotSquared_6_7 extends SpigotRestriction {
+public final class R_PlotSquared_6_7 extends PaperRestriction {
 
 	/**
 	 * @param logger the logger used to log whether a check fails or passes,

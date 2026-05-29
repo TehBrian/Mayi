@@ -1,4 +1,4 @@
-package dev.tehbrian.mayi.spigot.restrictions;
+package dev.tehbrian.mayi.paper.restrictions;
 
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldguard.LocalPlayer;
@@ -10,7 +10,7 @@ import com.sk89q.worldguard.protection.regions.RegionContainer;
 import com.sk89q.worldguard.protection.regions.RegionQuery;
 import dev.tehbrian.mayi.core.ActionType;
 import dev.tehbrian.mayi.core.RestrictionInfo;
-import dev.tehbrian.mayi.spigot.SpigotRestriction;
+import dev.tehbrian.mayi.paper.PaperRestriction;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ import java.util.Objects;
 
 @RestrictionInfo(name = "WorldGuard", version = "^7.*", mainClass = "com.sk89q.worldguard.bukkit.WorldGuardPlugin")
 @SuppressWarnings("checkstyle:TypeName")
-public final class R_WorldGuard_7 extends SpigotRestriction {
+public final class R_WorldGuard_7 extends PaperRestriction {
 
 	/**
 	 * @param logger the logger used to log whether a check fails or passes,

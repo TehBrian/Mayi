@@ -1,6 +1,6 @@
 rootProject.name = "mayi"
 
-projects("core", "spigot")
+projects("core", "paper")
 
 fun projects(vararg names: String) {
 	include(*names)

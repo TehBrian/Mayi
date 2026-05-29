@@ -1,4 +1,4 @@
-package dev.tehbrian.mayi.spigot;
+package dev.tehbrian.mayi.paper;
 
 import dev.tehbrian.mayi.core.Restriction;
 import dev.tehbrian.mayi.core.Mayi;
@@ -20,8 +20,8 @@ import java.util.regex.Pattern;
  * A utility class which registers {@link Restriction}s into a
  * {@link Mayi} instance according to a list of plugins.
  */
-public class SpigotRestrictionLoader
-		extends RestrictionLoader<Player, Location, SpigotRestriction, SpigotMayi, Plugin> {
+public class PaperRestrictionLoader
+		extends RestrictionLoader<Player, Location, PaperRestriction, PaperMayi, Plugin> {
 
 	/**
 	 * @param logger               the {@code Logger} used to log whether a check fails or
@@ -29,10 +29,10 @@ public class SpigotRestrictionLoader
 	 * @param plugins              the plugins to check
 	 * @param possibleRestrictions the {@code Restriction}s to maybe be registered
 	 */
-	public SpigotRestrictionLoader(
+	public PaperRestrictionLoader(
 			final Logger logger,
 			final List<Plugin> plugins,
-			final List<Class<? extends SpigotRestriction>> possibleRestrictions
+			final List<Class<? extends PaperRestriction>> possibleRestrictions
 	) {
 		super(logger, plugins, possibleRestrictions);
 	}
@@ -46,7 +46,7 @@ public class SpigotRestrictionLoader
 	 * @param mayi the {@code Mayi} instance
 	 */
 	@Override
-	public void load(final SpigotMayi mayi) {
+	public void load(final PaperMayi mayi) {
 		final List<String> pluginNames = new ArrayList<>();
 		plugins.forEach(p -> pluginNames.add(p.getName()));
 
@@ -62,7 +62,7 @@ public class SpigotRestrictionLoader
 		for (final Plugin plugin : plugins) {
 			logger.debug("Beginning restriction-check loop for plugin {}.", plugin.getName());
 
-			for (final Class<? extends SpigotRestriction> restrictionClass : possibleRestrictions) {
+			for (final Class<? extends PaperRestriction> restrictionClass : possibleRestrictions) {
 				logger.debug("Checking restriction {} for plugin {}.", restrictionClass.getSimpleName(), plugin.getName());
 
 				final RestrictionInfo info = restrictionClass.getAnnotation(RestrictionInfo.class);
@@ -97,7 +97,7 @@ public class SpigotRestrictionLoader
 						description.getVersion()
 				);
 
-				final Constructor<? extends SpigotRestriction> constructor;
+				final Constructor<? extends PaperRestriction> constructor;
 				try {
 					constructor = restrictionClass.getConstructor(Logger.class);
 				} catch (final NoSuchMethodException e) {
@@ -105,7 +105,7 @@ public class SpigotRestrictionLoader
 					continue;
 				}
 
-				final SpigotRestriction restriction;
+				final PaperRestriction restriction;
 				try {
 					restriction = constructor.newInstance(this.logger);
 				} catch (final InstantiationException | IllegalAccessException | InvocationTargetException e) {
