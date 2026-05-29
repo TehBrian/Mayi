@@ -11,7 +11,7 @@ description = rootProject.description
 
 indra {
 	javaVersions {
-		target(21)
+		target(25)
 	}
 
 	github("TehBrian", "RestrictionHelper")
