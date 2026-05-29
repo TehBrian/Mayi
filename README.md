@@ -11,4 +11,5 @@ Check out the project's [GitHub Wiki][wiki]. If you're new and just want to find
 read [Getting Started][gs].
 
 [wiki]: https://github.com/TehBrian/RestrictionHelper/wiki
+
 [gs]: https://github.com/TehBrian/RestrictionHelper/wiki/Getting-Started
