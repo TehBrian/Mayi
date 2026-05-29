@@ -3,5 +3,5 @@ plugins {
 }
 
 group = "dev.tehbrian"
-version = "0.5.0"
+version = "1.0.0"
 description = "A small library that eases the pain of checking the build restrictions of various plugins."
