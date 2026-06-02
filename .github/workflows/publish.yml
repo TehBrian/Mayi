@@ -1,9 +1,8 @@
-name: Publish release build to repo.tehbrian.dev
+name: Publish build to repo.tehbrian.dev
 
 on:
-  release:
-    types: [created]
-  workflow_dispatch:
+  push:
+    branches: [ main ]
 
 permissions:
   contents: read
